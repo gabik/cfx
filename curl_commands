@@ -1,0 +1,29 @@
+curl -c /tmp/clt/cookie_new -d"username=972527772457&email=111@2111.com&password1=111111&password2=111111&firstname=gabi&lastname=kazav" http://cl.kazav.net/account/Pnew/
+
+------------------------
+curl -b /tmp/cookie -d "parent=1" http://ws.kazav.net/oos/get_child/
+curl -b /tmp/cookie -d "cat=1" http://ws.kazav.net/oos/get_keys/
+curl -b /tmp/cookie -d "user_id=" http://ws.kazav.net/oos/get_user/
+curl -b /tmp/cookie -d "work_id=1" http://ws.kazav.net/oos/get_work/
+curl -b /tmp/cookie -d "area=1&item=21&text=just text&end_date=15/03/2013" http://ws.kazav.net/oos/post_work/
+curl -b /tmp/cookie_prov -d "work_id=4&text=haha text&price=5000" http://ws.kazav.net/oos/post_price/
+curl -c /tmp/cookie_prov -d"username=prov2&email=11@23111.com&password1=11111&password2=11111&phone_num1=765432&phone_num2=&address=hahahaddress&birthday=&area_id=1&firstname=gabi&lastname=kazav" http://ws.kazav.net/account/Pnew_prov/
+curl -b /tmp/cookie -F "work_id=18" -F "pic=@/usr/share/cups/www/images/smiley.jpg;type=image/jpg" http://ws.kazav.net/oos/post_pic/
+curl -b /tmp/cookie_prov -d"username=prov2&email=11@23111.com&password1=11111&password2=11111&phone_num1=765432&phone_num2=&address=hahahaddress&birthday=&area_id=1&firstname=gabi&lastname=kazav" http://ws.kazav.net/account/Pupdate_prov/
+curl -b /tmp/cookie_prov http://ws.kazav.net/account/Pget_profile/
+curl -b /tmp/cookie_prov -d "password1=123456789&"password2=123456789" http://ws.kazav.net/account/Pcng_pass/
+curl -b /tmp/cookie_prov -d"email=11@23111.com&phone_num1=765432&phone_num2=&address=hahahaddress&birthday=&area_id=1&first_name=gabi&last_name=kazav" http://ws.kazav.net/account/Pupdate_prof/
+curl -b /tmp/cookie -d "work_id=3" http://ws.kazav.net/oos/get_prices/
+curl -b /tmp/cookie http://ws.kazav.net/oos/get_works/
+curl -b /tmp/cookie_prov http://ws.kazav.net/oos/get_prov_works/
+curl -b /tmp/cookie http://ws.kazav.net/account/get_areas/
+curl -b /tmp/cookie -d "value1=5&value2=7&value3=11&junk=15" http://ws.kazav.net/oos/post_item/
+curl -b /tmp/cookie -d "work_id=15" http://ws.kazav.net/oos/del_work/
+
+curl -d"username=972527772457" http://cl.kazav.net/account/resend_pin/
+curl -d"username=972527772457" http://cl.kazav.net/account/password/
+curl -d"username=972527772457&again=0" http://cl.kazav.net/account/password/
+curl -d"username=972527772457&again=1" http://cl.kazav.net/account/password/
+
+SMS: curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/AC442a538b44777e2897d4edff57437a24/SMS/Messages.xml' -d 'From=%2B16698005705' -d 'To=%2B972527772457' -d 'Body=Hi%2C+Test+message' -u AC442a538b44777e2897d4edff57437a24:be3a4e5fbf058c5b27a2904efd05d726
+
