@@ -1,4 +1,4 @@
-curl -c /tmp/clt/cookie_new -d"username=972527772457&email=111@2111.com&password1=111111&password2=111111&firstname=gabi&lastname=kazav" http://cl.kazav.net/account/Pnew/
+curl -c /tmp/clt/cookie_new -d"username=972527772457&email=111@2111.com&password1=111111&password2=111111&firstname=gabi&lastname=kazav" http://cofix.kazav.net/account/Pnew/
 
 ------------------------
 curl -b /tmp/cookie -d "parent=1" http://ws.kazav.net/oos/get_child/
